@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Launch Pad - Under Construction</title>
+    <style>
+        /* Modern Reset and CSS Variables */
+        :root {
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-main: #2d3748;
+            --text-muted: #718096;
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --accent: #10b981;
+            --warning: #d97706;
+            --warning-bg: #fef3c7;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container Card */
+        .launch-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .launch-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Under Construction Banner */
+        .construction-banner {
+            background-color: var(--warning-bg);
+            color: var(--warning);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            border: 1px solid #fde68a;
+        }
+
+        /* Icon Badge */
+        .icon-badge {
+            background-color: #e0e7ff;
+            color: var(--primary);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 24px auto;
+            font-size: 32px;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Interactive Status Pill */
+        .status-pill {
+            display: inline-block;
+            background-color: #ecfdf5;
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Call to Action Button */
+        .btn-launch {
+            display: block;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+            cursor: pointer;
+            border: none;
+            width: 100%;
+        }
+
+        .btn-launch:hover {
+            background-color: var(--primary-hover);
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+        }
+
+        /* Footer styling for JS status */
+        .footer-note {
+            margin-top: 24px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="launch-card">
+        <div class="construction-banner">
+            ⚠️ Site Under Construction
+        </div>
+
+        <div class="icon-badge">🚀</div>
+        
+        <div class="status-pill">Ready to Run</div>
+        
+        <h1>Project Application</h1>
+        <p>Welcome to your hosted repository application. Click the button below to trigger the integrated JavaScript application logic.</p>
+        
+        <button class="btn-launch" id="launchBtn">Launch App</button>
+
+        <div class="footer-note" id="jsStatus">
+            JavaScript Status: <span style="color: var(--text-muted);">Waiting...</span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('launchBtn').addEventListener('click', function() {
+            const statusBox = document.getElementById('jsStatus');
+            statusBox.innerHTML = 'JavaScript Status: <span style="color: #10b981; font-weight: bold;">🚀 App Successfully Triggered!</span>';
+            alert("Your JavaScript code is fully functional on GitHub Pages!");
+        });
+    </script>
+</body>
+</html>
